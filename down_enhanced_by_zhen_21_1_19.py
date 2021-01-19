@@ -7,7 +7,7 @@ import json
 class GetItem(object):
     def rename_hook(self, d):
         if d['status'] == 'finished':
-            file_name = '%s'% d['filename']
+            file_name = '%s'% d['filename'] + '.mp4'
             rename(d['filename'], file_name)
             print('下载完成{}'.format(file_name))
 
